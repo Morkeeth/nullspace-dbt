@@ -1,0 +1,4 @@
+name: nullspace_fulfillment
+version: '1.0.0'
+profile: nullspace
+model-paths: ['models']
