@@ -3,4 +3,4 @@ sources:
   - name: warehouse_source
     schema: ecommerce
     tables:
-      - name: revenue_events
+      - name: trials
