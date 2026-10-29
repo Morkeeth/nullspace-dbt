@@ -1,6 +1,11 @@
 # nullspace-dbt
 
-The warehouse repo that **Nullspace's builder agent writes into**.
+**nullspace-dbt is the warehouse repo a builder agent opens real pull requests into, so the last beat of Nullspace is a PR a stranger can read rather than a local file path.**
+
+Nullspace records what agents searched DataHub for and could not find; when demand for a missing dataset crosses a threshold, something has to write the table.
+For anyone reviewing Nullspace, or anyone who wants to see what an agent-authored dbt pull request looks like.
+`main` holds only the base (`dbt_project.yml` and `models/stg_trials.sql`); every `nullspace/ghost_*` branch and PR is work an agent did, with the requesting agents, their queries, the inferred schema and the SQL-validation proof in the PR body.
+Companion to https://github.com/Morkeeth/nullspace. Run: `dbt deps && dbt build`.
 
 Companion to [`Morkeeth/nullspace`](https://github.com/Morkeeth/nullspace) — the
 DataHub agent-hackathon submission.
